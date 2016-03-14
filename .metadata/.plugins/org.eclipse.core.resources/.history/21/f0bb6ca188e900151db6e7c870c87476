@@ -1,0 +1,18 @@
+import java.util.ArrayList;
+import java.util.Random;
+
+public class ArrayListPuzzles {
+	public static void main(String[] args) {
+		ArrayListPuzzles ALP = new ArrayListPuzzles();
+	}
+	ArrayListPuzzles() {
+		ArrayList<String> foods = new ArrayList<String>();
+		foods.add("pie");
+		foods.add("blueberry pie");
+		foods.add("cherry pie");
+		foods.add("apple pie");
+		foods.add("pumpkin pie");
+		foods.add("pie pie");
+		System.out.println(foods.get(new Random().nextInt(6)));
+	}
+}

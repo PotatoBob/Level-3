@@ -1,0 +1,6 @@
+
+public class ArrayListPuzzles {
+public static void main(String[] args) {
+	ArrayListPuzzles ALP = new ArrayListPuzzles();
+}
+}
