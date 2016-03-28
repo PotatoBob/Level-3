@@ -1,0 +1,14 @@
+import java.util.ArrayList;
+
+public class Student {
+	private int intell = 0;
+	String name="";
+	Student(int intell, String name) {
+		
+		
+	}
+	public int getIntell() {
+		return intell;
+	}
+
+}

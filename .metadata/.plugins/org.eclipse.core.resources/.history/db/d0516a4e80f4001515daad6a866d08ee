@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+
+public class Classroom {
+
+	ArrayList<Integer> intelligence = new ArrayList<Integer>();
+	ArrayList<String> names = new ArrayList<String>();
+
+	public static void main(String[] args) {
+		Student S = new Student(0, null);
+		Classroom C = new Classroom();
+		C.intelligenceLevels();
+		C.studentNames();
+	}
+	public Classroom() {
+		for (Integer I : intelligence) {
+			System.out.println(""+I);
+		}
+	}
+	void intelligenceLevels() {
+		intelligence.add(1);
+		intelligence.add(2);
+	}
+	void studentNames() {
+		names.add("A");
+		names.add("B");
+	}
+}
