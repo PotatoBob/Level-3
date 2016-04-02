@@ -9,7 +9,6 @@ public class ArrayListPuzzles {
 	DinnerDecider();
 	CommedyCentral();
 	BandNameGenerator();
-	Overload();
 	}
 	void DinnerDecider() {
 		ArrayList<String> foods = new ArrayList<String>();
@@ -23,11 +22,11 @@ public class ArrayListPuzzles {
 	}
 	void CommedyCentral() {
 		int z = 0;
-		ArrayList<String> jokes = new ArrayList<>();
+		ArrayList<String> jokes = new ArrayList<String>();
 		jokes.add("What do you call a cow with 3 legs?");
 		jokes.add("What do you call a cow with no legs?");
 		jokes.add("What do you call a cow with 2 legs?");
-		ArrayList<String> punchlines = new ArrayList<>();
+		ArrayList<String> punchlines = new ArrayList<String>();
 		punchlines.add("Lean beef");
 		punchlines.add("Ground beef");
 		punchlines.add("Yo' mama");
@@ -35,12 +34,12 @@ public class ArrayListPuzzles {
 		System.out.println(punchlines.get(z));
 	}
 	void BandNameGenerator() {
-		ArrayList<String> adj = new ArrayList<>();
+		ArrayList<String> adj = new ArrayList<String>();
 		adj.add("minimum");
 		adj.add("glorious");
 		adj.add("vast");
 		adj.add("universal");
-		ArrayList<String> noun = new ArrayList<>();
+		ArrayList<String> noun = new ArrayList<String>();
 		noun.add("ban");
 		noun.add("abolition");
 		noun.add("reader");
@@ -49,12 +48,11 @@ public class ArrayListPuzzles {
 		System.out.print(noun.get(new Random().nextInt(4)));
 	}
 	void Overload() {
-		int x = 2147483647;
+		int x = 0;
 		ArrayList<Integer> bacon = new ArrayList<>();
-		while(x==x) {
+		while(1==1) {
 			bacon.add(x);
 			x++;
-			System.out.println(x);
 		}
 	}
 }
