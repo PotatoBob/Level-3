@@ -1,0 +1,13 @@
+import java.util.Stack;
+
+public class IntroToStacks {
+	public static void main(String[] args) {
+		IntroToStacks ITS = new IntroToStacks();
+	}
+	IntroToStacks() {
+		Stack<Float> myStack = new Stack<>();
+		myStack.push((float) 2.7);
+		myStack.push(3.1f);
+		System.out.println(myStack.pop());
+	}
+}

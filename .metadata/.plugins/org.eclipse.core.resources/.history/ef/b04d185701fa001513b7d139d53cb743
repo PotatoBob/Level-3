@@ -1,0 +1,16 @@
+
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+
+public class Idunno {
+	@Test
+	public void test() {
+		//fail("Not yet implemented");
+		assertEquals(289, addsNum(69, 420));
+	}
+	int addsNum(int x,  y)	{
+		return x+y;
+	}
+}
