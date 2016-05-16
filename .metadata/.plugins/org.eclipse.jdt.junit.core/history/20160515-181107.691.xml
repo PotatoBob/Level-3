@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="moreandmoretestsTest" project="Level_3" tests="4" started="4" failures="0" errors="0" ignored="0">
-  <testsuite name="moreandmoretestsTest" time="0.0">
-    <testcase name="SquareTest" classname="moreandmoretestsTest" time="0.0"/>
-    <testcase name="PrimeTest" classname="moreandmoretestsTest" time="0.0"/>
-    <testcase name="CubeTest" classname="moreandmoretestsTest" time="0.0"/>
-    <testcase name="MultTest" classname="moreandmoretestsTest" time="0.0"/>
-  </testsuite>
-</testrun>
