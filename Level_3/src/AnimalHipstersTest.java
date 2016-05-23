@@ -33,6 +33,6 @@ public class AnimalHipstersTest
 		favoriteAnimals.put("Elena", "Quokka");
 		favoriteAnimals.put("Fan-Hal", "Springbok");
 		
-		assertTrue(AnimalHipsters.findAnimalHipsters(network, favoriteAnimals).containsAll(new ArrayList<String>(Arrays.asList(new String[] {"Amy", "Elena", "Chris", "Fan-Hal"}))));
+		assertTrue(AnimalHipsters.findAnimalHipsters(network, favoriteAnimals).containsAll(new ArrayList<String>(Arrays.asList(new String[] {"Amy",  "Chris", "Elena","Fan-Hal"}))));
 	}
 }

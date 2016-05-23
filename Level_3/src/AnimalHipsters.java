@@ -13,6 +13,8 @@ public class AnimalHipsters {
 	static ArrayList<String> Devney = new ArrayList<>();	
 	static ArrayList<String> Elena = new ArrayList<>();		
 	static ArrayList<String> FanHal = new ArrayList<>();
+	HashMap<String, ArrayList<String>> network = new HashMap<>();
+	HashMap<String, String> favoriteAnimals = new HashMap<>(); 
 	public static void main(String[] args) {
 		AnimalHipsters AH = new AnimalHipsters();
 	}
@@ -35,6 +37,7 @@ public class AnimalHipsters {
 		Elena.add("Fan-Hal"); //Elena connectd to Fa-Hal
 		FanHal.add("Chris"); //Fan-Hal connected to Chris
 		FanHal.add("Elena"); //Fan-Hal connected to Elena
+		findAnimalHipsters(network, favoriteAnimals);
 	}
 	static ArrayList<String> findAnimalHipsters(HashMap<String, ArrayList<String>> network, HashMap<String, String> favoriteAnimals) {
 		network.put("Amy", Amy); //Amy connected to Amy ArrayList
@@ -50,67 +53,84 @@ public class AnimalHipsters {
 		favoriteAnimals.put("Devney", "Springbok"); //Devney's favorite is Springbok
 		favoriteAnimals.put("Elena", "Quokka"); //Elena's favorite is Quokka
 		favoriteAnimals.put("Fan-Hal", "Springbok"); //Fan-Hal's favorite is Springbok
+
+		System.out.println(network.keySet());
+		System.out.println(favoriteAnimals.keySet());
 		
 		for (String string : Amy) {
-			if (!favoriteAnimals.get(string).equals("Quokka")) {
+			if (!favoriteAnimals.get(string).equals(favoriteAnimals.get("Amy"))) {
 				
 			}
 			else {
 				network.remove("Amy");
 				favoriteAnimals.remove("Amy");
-				break;
+				network.remove(string);
+				favoriteAnimals.remove(string);
 			}
-		}
+		} if (network.containsKey("Brie") && favoriteAnimals.containsKey("Brie")) {
+			
 		for (String string : Brie) {
-			if (!favoriteAnimals.get(string).equals("Springbok")) {
+			if (!favoriteAnimals.get(string).equals(favoriteAnimals.get("Brie"))) {
 				
 			}
 			else {
 				network.remove("Brie");
 				favoriteAnimals.remove("Brie");
-				break;
+				network.remove(string);
+				favoriteAnimals.remove(string);
 			}
 		}
+		} if (network.containsKey("Chris") && favoriteAnimals.containsKey("Chris")) {
 		for (String string : Chris) {
-			if (!favoriteAnimals.get(string).equals("Nubian Ibex")) {
+			if (!favoriteAnimals.get(string).equals(favoriteAnimals.get("Chris"))) {
 				
 			}
 			else {
 				network.remove("Chris");
 				favoriteAnimals.remove("Chris");
-				break;
+				network.remove(string);
+				favoriteAnimals.remove(string);
 			}
 		}
+		} if (network.containsKey("Devney") && favoriteAnimals.containsKey("Devney")) {
 		for (String string : Devney) {
-			if (!favoriteAnimals.get(string).equals("Springbok")) {
+			if (!favoriteAnimals.get(string).equals(favoriteAnimals.get("Devney"))) {
 				
-			}
-			else {
 				network.remove("Devney");
 				favoriteAnimals.remove("Devney");
-				break;
-			}
-		}
-		for (String string : Elena) {
-			if (!favoriteAnimals.get(string).equals("Quokka")) {
-				
+				network.remove(string);
+				favoriteAnimals.remove(string);
 			}
 			else {
+			}
+		}
+		} if (network.containsKey("Elena") && favoriteAnimals.containsKey("Elena")) {
+		for (String string : Elena) {
+			if (favoriteAnimals.get(string).equals(favoriteAnimals.get("Elena"))) {
+				
 				network.remove("Elena");
 				favoriteAnimals.remove("Elena");
-				break;
-			}
-		}
-		for (String string : FanHal) {
-			if (!favoriteAnimals.get(string).equals("Springbok")) {
-				
+				network.remove(string);
+				favoriteAnimals.remove(string);
 			}
 			else {
-				network.remove("Fan-Hal");
-				favoriteAnimals.remove("Fan-Hal");
-				break;
 			}
 		}
+		} if (network.containsKey("Fan-Hal") && favoriteAnimals.containsKey("Fan-Hal")) {
+		for (String string : FanHal) {
+			if (favoriteAnimals.get(string).equals(favoriteAnimals.get("Fan-Hal"))) {
+				
+				network.remove("Fan-Hal");
+				favoriteAnimals.remove("Fan-Hal");
+				network.remove(string);
+				favoriteAnimals.remove(string);
+			}
+			else {
+			}
+		}
+		}
+		System.out.println(network.keySet());
+		System.out.println(favoriteAnimals.keySet());
 		return findAnimalHipsters(network, favoriteAnimals);
 		
 	}	
