@@ -13,6 +13,8 @@ public class AnimalHipsters {
 	static ArrayList<String> Devney = new ArrayList<>();	
 	static ArrayList<String> Elena = new ArrayList<>();		
 	static ArrayList<String> FanHal = new ArrayList<>();
+	static boolean isAnimalHipster = true;
+	static ArrayList<String> animalHipsters = new ArrayList<>();
 	HashMap<String, ArrayList<String>> network = new HashMap<>();
 	HashMap<String, String> favoriteAnimals = new HashMap<>(); 
 	public static void main(String[] args) {
@@ -54,84 +56,22 @@ public class AnimalHipsters {
 		favoriteAnimals.put("Elena", "Quokka"); //Elena's favorite is Quokka
 		favoriteAnimals.put("Fan-Hal", "Springbok"); //Fan-Hal's favorite is Springbok
 
-		System.out.println(network.keySet());
-		System.out.println(favoriteAnimals.keySet());
+		//System.out.println(network.keySet());
+		//System.out.println(favoriteAnimals.keySet());
 		
-		for (String string : Amy) {
-			if (!favoriteAnimals.get(string).equals(favoriteAnimals.get("Amy"))) {
-				
+		for (String person : favoriteAnimals.keySet()) {
+			isAnimalHipster = true;
+			for (String friend : network.get(person)) {
+				if (favoriteAnimals.get(person).equals(favoriteAnimals.get(friend))) {
+					isAnimalHipster = false;
+				}
 			}
-			else {
-				network.remove("Amy");
-				favoriteAnimals.remove("Amy");
-				network.remove(string);
-				favoriteAnimals.remove(string);
-			}
-		} if (network.containsKey("Brie") && favoriteAnimals.containsKey("Brie")) {
-			
-		for (String string : Brie) {
-			if (!favoriteAnimals.get(string).equals(favoriteAnimals.get("Brie"))) {
-				
-			}
-			else {
-				network.remove("Brie");
-				favoriteAnimals.remove("Brie");
-				network.remove(string);
-				favoriteAnimals.remove(string);
+			if (isAnimalHipster) {
+				animalHipsters.add(person);
 			}
 		}
-		} if (network.containsKey("Chris") && favoriteAnimals.containsKey("Chris")) {
-		for (String string : Chris) {
-			if (!favoriteAnimals.get(string).equals(favoriteAnimals.get("Chris"))) {
-				
-			}
-			else {
-				network.remove("Chris");
-				favoriteAnimals.remove("Chris");
-				network.remove(string);
-				favoriteAnimals.remove(string);
-			}
-		}
-		} if (network.containsKey("Devney") && favoriteAnimals.containsKey("Devney")) {
-		for (String string : Devney) {
-			if (!favoriteAnimals.get(string).equals(favoriteAnimals.get("Devney"))) {
-				
-				network.remove("Devney");
-				favoriteAnimals.remove("Devney");
-				network.remove(string);
-				favoriteAnimals.remove(string);
-			}
-			else {
-			}
-		}
-		} if (network.containsKey("Elena") && favoriteAnimals.containsKey("Elena")) {
-		for (String string : Elena) {
-			if (favoriteAnimals.get(string).equals(favoriteAnimals.get("Elena"))) {
-				
-				network.remove("Elena");
-				favoriteAnimals.remove("Elena");
-				network.remove(string);
-				favoriteAnimals.remove(string);
-			}
-			else {
-			}
-		}
-		} if (network.containsKey("Fan-Hal") && favoriteAnimals.containsKey("Fan-Hal")) {
-		for (String string : FanHal) {
-			if (favoriteAnimals.get(string).equals(favoriteAnimals.get("Fan-Hal"))) {
-				
-				network.remove("Fan-Hal");
-				favoriteAnimals.remove("Fan-Hal");
-				network.remove(string);
-				favoriteAnimals.remove(string);
-			}
-			else {
-			}
-		}
-		}
-		System.out.println(network.keySet());
-		System.out.println(favoriteAnimals.keySet());
-		return findAnimalHipsters(network, favoriteAnimals);
+		System.out.println(animalHipsters);
+		return animalHipsters;
 		
 	}	
 }
