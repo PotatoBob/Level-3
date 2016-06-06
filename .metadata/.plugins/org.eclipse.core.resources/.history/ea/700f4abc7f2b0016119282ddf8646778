@@ -14,10 +14,8 @@ public class LargestSmallest {
 		LargestSmallest LS = new LargestSmallest();
 	}
 	LargestSmallest() {
-		System.out.println("Enter numbers separated by spaces and the last one has to be 0");
-		String x = keyboard.nextLine();
-		System.out.println(x);
-		x.split("0");
+		System.out.println("Enter numbers, and make the last one 0");
+		String x = keyboard.next();
 		System.out.println(x);
 	}
 	void findIt() {

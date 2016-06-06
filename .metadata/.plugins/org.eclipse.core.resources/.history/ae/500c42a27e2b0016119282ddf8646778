@@ -1,11 +1,9 @@
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
 public class LargestSmallest {
-	Scanner keyboard = new Scanner(System.in);
 	int sentinel = 0;
 	String input = "";
 	String[] thing;
@@ -14,11 +12,9 @@ public class LargestSmallest {
 		LargestSmallest LS = new LargestSmallest();
 	}
 	LargestSmallest() {
-		System.out.println("Enter numbers separated by spaces and the last one has to be 0");
-		String x = keyboard.nextLine();
-		System.out.println(x);
-		x.split("0");
-		System.out.println(x);
+		input = JOptionPane.showInputDialog("Input numbers separated by a comma (no spaces), and the last number should be a '0'");
+		thing = input.split(",");
+		numbers = (ArrayList<String>) (Arrays.asList(thing));
 	}
 	void findIt() {
 		
