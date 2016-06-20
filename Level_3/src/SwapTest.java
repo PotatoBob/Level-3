@@ -1,0 +1,19 @@
+import static org.junit.Assert.*;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import org.junit.Test;
+
+public class SwapTest {
+
+	@Test
+	public void test() {
+		assertEquals("kucd", swap("duck", 0, 3));
+	}
+	String swap(String s, int x, int y) {
+		char[] ss = s.toCharArray();
+		ArrayList<Character> sss = new ArrayList<Character>(Arrays.asList(ss));
+		return s;
+	}
+}

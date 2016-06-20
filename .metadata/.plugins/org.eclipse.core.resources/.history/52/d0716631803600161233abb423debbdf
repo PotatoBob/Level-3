@@ -1,0 +1,12 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class PalindromeTest {
+
+	String pal = "racecar";
+	String notpal = "caca";
+	assertTrue(isPalindrome(pal));
+	
+
+}
