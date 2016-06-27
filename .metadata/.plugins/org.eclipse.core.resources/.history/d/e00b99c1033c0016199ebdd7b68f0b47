@@ -1,0 +1,37 @@
+import static org.junit.Assert.*;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import org.junit.Test;
+
+public class SwapTest {
+
+	@Test
+	public void test() {
+		assertEquals("kucd", swap("duck", 0, 3));
+	}
+	String swap(String s, int x, int y) {
+		char ssss;
+		/*char[] ssssss = s.toCharArray();
+		ArrayList<Character> sss = new ArrayList<Character>(s.length());
+		for (int i = 0; i < s.length(); i++) {
+			sss.add(s.charAt(i));
+		}
+		ssss = sss.get(x);
+		sss.add(x, sss.get(y));
+		sss.remove(x+1);
+		sss.add(y, ssss);
+		sss.remove(y+1);*/
+		for (int i = 0; i < s.length(); i++) {
+			if (i == x) {
+				System.out.print(s.charAt(y));
+			} else if (i == y) {
+				System.out.print(s.charAt(x));
+			} else {
+				System.out.print(s.charAt(i));
+			}
+		}
+		return s;
+	}
+}
